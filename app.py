@@ -24,6 +24,10 @@ class Task(db.Model):
     def __repr__(self):
         return f'<Task {self.title}>'
 
+# Cria o banco de dados para funcionar no gunicorn/Render  
+with app.app_context():
+        db.create_all()
+
 @app.route('/')
 def index():
     return 'API Online! Acesse <a href="/apidocs">/apidocs</a> para testar.'
@@ -180,6 +184,4 @@ def delete_task(id):
     return {'mensagem': 'Tarefa deletada com sucesso!'}, 200
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
     app.run(debug=True)
