@@ -4,7 +4,7 @@ Olá, Esse é o repositório do meu primeiro projeto Backend "de verdade".
 
 A ideia aqui foi criar uma API para gerenciar tarefas (To-Do List). Mas o objetivo não era só fazer a lista, mas sim **entender como funciona por "trás" do site**. Como a persistência de dados, qundo você clica em "Salvar" e o dado não se perde? É isso que eu construí aqui.
 
-🔗 **Vê ela rodando online:** [https://anderson-api-todo.onrender.com/apidocs](https://anderson-api-todo.onrender.com/apidocs)
+🔗 **Vê ela rodando online:** [https://anderson-api-todo.onrender.com/apidocs](https://flask-todo-api-yu62.onrender.com/apidocs/)
 *(Nota: pode levar um tempo para o app funcionar de primeira, demora um pouco para carregar de primeira 😅)*
 
 ---
