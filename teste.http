@@ -1,6 +1,4 @@
-### PASSO 1: CRIAR (Create)
-# Vamos criar uma tarefa nova.
-# Esperado: Status 201 Created e o ID da nova tarefa.
+### CRIAR
 POST http://127.0.0.1:5000/tasks
 Content-Type: application/json
 
@@ -9,19 +7,13 @@ Content-Type: application/json
     "description": "Se essa tarefa for criada, o POST funciona."
 }
 
-### PASSO 2: LISTAR TUDO (Read All)
-# Vamos ver se a tarefa apareceu na lista.
-# Esperado: Status 200 OK e uma lista com a tarefa criada acima.
+### LISTAR TUDO
 GET http://127.0.0.1:5000/tasks
 
-### PASSO 3: LER APENAS UMA (Read One)
-# Vamos ver os detalhes apenas da tarefa 1.
-# (Se sua tarefa tiver outro ID, mude o número 1 na URL abaixo)
+### LER APENAS UMA
 GET http://127.0.0.1:5000/tasks/1
 
-### PASSO 4: ATUALIZAR (Update)
-# Vamos mudar o status dela para "done: true" (Feita).
-# Esperado: Status 200 OK e o JSON atualizado.
+### ATUALIZAR
 PUT http://127.0.0.1:5000/tasks/1
 Content-Type: application/json
 
@@ -31,16 +23,11 @@ Content-Type: application/json
     "done": true
 }
 
-### PASSO 5: VERIFICAR ATUALIZAÇÃO
-# Vamos ler de novo para garantir que salvou a mudança.
+### VERIFICAR ATUALIZAÇÃO
 GET http://127.0.0.1:5000/tasks/1
 
-### PASSO 6: DELETAR (Delete)
-# Agora vamos apagar a tarefa 1.
-# Esperado: Status 200 OK e mensagem de sucesso.
+### DELETAR
 DELETE http://127.0.0.1:5000/tasks/1
 
-### PASSO 7: PROVA FINAL
-# Vamos tentar buscar a tarefa 1 de novo.
-# Esperado: Status 404 Not Found (Erro), pois ela não existe mais.
+### TESTA SE A TAREFA FOI DELETADA
 GET http://127.0.0.1:5000/tasks/1
